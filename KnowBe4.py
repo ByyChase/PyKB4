@@ -1,7 +1,7 @@
 import requests
 
 class KnowBe4:
-    def __init__(self, API_Key):
+    def __init__(self, api_key):
         self.api_key = api_key
           
     def build_non_page_url(api_key, url):
@@ -23,7 +23,7 @@ class KnowBe4:
         
     def account(self):
         url = 'https://us.api.knowbe4.com/v1/account'
-        return build_page_url(self.api_key, url)
+        return build_non_page_url(self.api_key, url)
 
     def users(self):
         url = 'https://us.api.knowbe4.com/v1/users'
@@ -31,7 +31,7 @@ class KnowBe4:
             
     def users_in_group(self, group_id):
         url = 'https://us.api.knowbe4.com/v1/groups/' + group_id + '/members'
-        return build_page_url(self.api_key, url)
+        return build_non_page_url(self.api_key, url)
     
     def user(self, user_id):
         url = 'https://us.api.knowbe4.com/v1/users/' + user_id + ''
@@ -39,40 +39,40 @@ class KnowBe4:
 
     def groups(self):
         url = 'https://us.api.knowbe4.com/v1/groups'
-        return build_page_url(self.api_key, url)
+        return build_non_page_url(self.api_key, url)
                
     def user(self, group_id):
         url = 'https://us.api.knowbe4.com/v1/groups/' + group_id + ''
-        return build_page_url(self.api_key, url)
+        return build_non_page_url(self.api_key, url)
 
     def groups(self):
         url = 'https://us.api.knowbe4.com/v1/groups'
-        return build_page_url(self.api_key, url)
+        return build_non_page_url(self.api_key, url)
     
     def all_phishing_capaigns(self):
         url = 'https://eu.api.knowbe4.com/v1/phishing/campaigns'
-        return build_page_url(self.api_key, url)
+        return build_non_page_url(self.api_key, url)
     
     def phishing_campaign(self, campaign_id):
-        url = 'https://eu.api.knowbe4.com/v1/phishing/campaigns/' + campaign_id + ''
-        return build_page_url(self.api_key, url)
+        url = 'https://us.api.knowbe4.com/v1/phishing/campaigns/' + campaign_id + ''
+        return build_non_page_url(self.api_key, url)
     
     def all_phishing_security_tests(self):
         url = 'https://us.api.knowbe4.com/v1/phishing/security_tests'  
-        return build_page_url(self.api_key, url)  
+        return build_non_page_url(self.api_key, url)  
     
     def all_phishing_security_test_from_campaign(self, campaign_id):
         url = 'https://us.api.knowbe4.com/v1/phishing/campaigns/' + campaign_id + '/security_tests'
-        return build_page_url(self.api_key, url)  
+        return build_non_page_url(self.api_key, url)  
     
     def phishing_security_test(self, pst_id):
         url = 'https://us.api.knowbe4.com/v1/phishing/security_tests/' + pst_id + ''
-        return build_page_url(self.api_key, url) 
+        return build_non_page_url(self.api_key, url) 
         
     def security_test_results(self, pst_id):
         url = 'https://us.api.knowbe4.com/v1/phishing/security_tests/' + pst_id + '/recipients'
-        return build_page_url(self.api_key, url) 
+        return build_non_page_url(self.api_key, url) 
     
     def user_security_test_results(self, pst_id, recipient_id):
         url = 'https://us.api.knowbe4.com/v1/phishing/security_tests/' + pst_id + '/recipients/' + recipient_id + ''
-        return build_page_url(self.api_key, url) 
+        return build_non_page_url(self.api_key, url) 
