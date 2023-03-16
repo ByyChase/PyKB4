@@ -1,4 +1,2 @@
-# KnowBe4Wrapper
-Simple python wrapper for the KnowBe4 API
-
-this can be installed from pip using `pip install KnowBe4Wrapper` 
+# PyKB4
+These python scripts allow you to pull data from each of the major API endpoints from the KnowBe4 Security Awareness Platform. 
