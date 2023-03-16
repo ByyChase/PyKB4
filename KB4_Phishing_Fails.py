@@ -32,7 +32,7 @@ for x in numpages:
 for y in range(len(psts_Numbers)):
 
     try:
-        campaign_temp = requests.get('https://us.api.knowbe4.com/v1/phishing/security_tests/' + psts_Numbers[y] +  '/recipients', headers = { 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhaWQiOjg1OTU3LCJpYXQiOjE2MTAwMzcyNjl9.FBGGC9E7EGjVFop1quOuLdhQ3s6DT56bcXQVnv1V_aE'}, params = {'page': pagenumber}).json()
+        campaign_temp = requests.get('https://us.api.knowbe4.com/v1/phishing/security_tests/' + psts_Numbers[y] +  '/recipients', headers = { 'Authorization': 'Bearer ' + api_key}, params = {'page': pagenumber}).json()
         campaign = campaign_temp
     except:
         pass
@@ -41,7 +41,7 @@ for y in range(len(psts_Numbers)):
         campaign += campaign_temp
         
         try:
-            campaign_temp = requests.get('https://us.api.knowbe4.com/v1/phishing/security_tests/' + psts_Numbers[y] +  '/recipients', headers = { 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhaWQiOjg1OTU3LCJpYXQiOjE2MTAwMzcyNjl9.FBGGC9E7EGjVFop1quOuLdhQ3s6DT56bcXQVnv1V_aE'}, params = {'page': pagenumber}).json()
+            campaign_temp = requests.get('https://us.api.knowbe4.com/v1/phishing/security_tests/' + psts_Numbers[y] +  '/recipients', headers = { 'Authorization': 'Bearer ' + api_key}, params = {'page': pagenumber}).json()
 
         except:
             pass
